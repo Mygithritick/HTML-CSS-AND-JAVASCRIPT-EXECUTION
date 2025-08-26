@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.fetch("https://api.github.com/users")
+        .then((x)=>x.json())
+        .then((y)=> y.forEach((ele)=>{
+            let h1=document.createElement("h1");
+            let h2=document.createElement("h2");
+            let img=document.createElement("img");
+            let div=document.createElement("div");
+
+            h1.innerText=ele.login;
+            h2.innerText=ele.id;
+            img.src=ele.avatar_url;
+            div.append(h1,h2,img);
+            document.body.append(div);
+        }))
+        .catch((err)=>console.log(err))
+
+        //async & await
+        async function add()
+        {
+            let data=await fetch("https://api.github.com/users");
+            let finalData=await data.json();
+            console.log(finalData);
+            
+        }
+        add();
+            
+        
+
+
+       
+    </script>
+</body>
+</html>

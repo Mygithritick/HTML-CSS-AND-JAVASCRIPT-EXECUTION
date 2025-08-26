@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(JSON);
+        let obj={
+            id:100,
+            name:"Ram"
+        }
+        //to convert js object into json object
+        let jsonobj=JSON.stringify(obj);
+        console.log(jsonobj);
+
+        //to convert json object into js object
+        let jsobj=JSON.parse(jsonobj);
+        console.log(jsobj);
+        
+        
+        
+    </script>
+</body>
+</html>

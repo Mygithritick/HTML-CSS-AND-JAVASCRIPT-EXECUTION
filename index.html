@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //date object
+        let date=new Date();
+        console.log(date.getDate());
+        console.log(date.getDay());
+        console.log(date.getFullYear());
+        console.log(date.getMonth());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        console.log(date.getMilliseconds());
+
+
+        //Math
+        console.log(Math.PI);
+        console.log(Math.sqrt(4));
+        console.log(Math.cbrt(8));
+        console.log(Math.ceil(10.01));
+        console.log(Math.floor(10.9));
+        console.log(Math.round(10.5));
+        console.log(Math.min(10,20,30,40));
+        console.log(Math.max(10,20,30,40));
+
+        //random
+        console.log(parseInt(Math.random()*10000));
+
+        let obj1={
+            backend:{
+                frontend:{
+                    course:"javascript"
+                }
+            }
+        }
+        console.log(obj1.backend.frontend.course);
+        let {course}=obj1.backend.frontend;
+        
+
+
+        let arr=[10,"hi",true,undefined,1n,()=>{console.log("i am function")}];
+        arr[5]();
+        arr.map((x)=>{
+            console.log(x);
+        })
+
+        let arr1=[()=>{console.log("hiii")},()=>{console.log("hello")},()=>{console.log("byeee")}];
+        arr1[0]();
+        arr1[1]();
+        arr1[2]();
+        arr1.map((x)=>{
+            x();
+        })
+
+        let brr=[{id:100,name:"Ram"},{id:200,name:"Sam"},{id:300,name:"Aam"}]
+        brr.map((x)=>{
+            console.log(x.id);
+            console.log(x.name);
+            
+        })
+        let crr=[[10,20,30],[100,200,300],[1000,2000,3000]];
+        crr.map((x)=>{
+              x.map((x)=>{
+                   console.log(x);
+        
+            })
+    })
+//immutable or object de-referencing
+let a=100;
+let b=a;
+console.log(a,b);
+a=400;
+console.log((a,b));
+
+
+
+
+
+
+
+    //mutable or object referencing
+    let r={
+        id:100,
+        name:"abc"
+    }
+    let s=r;
+    console.log(s,r);
+    s.name="hvuehfu";
+    console.log(r,s);
+    
+    
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+    </script>
+
+</body>
+</html>

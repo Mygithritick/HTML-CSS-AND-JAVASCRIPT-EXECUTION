@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Events Demo</title>
+  <style>
+    /* Common styling for the 3 boxes */
+    #a, #b, #c {
+      border: 2px solid red;
+      padding: 50px;
+      background-color: hotpink;
+    }
+    body {
+      display: flex;
+      justify-content: space-around;
+      gap: 12px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <!-- Link external JavaScript (defer so it loads after HTML) -->
+  <script defer src="./DomEvent.js"></script>
+</head>
+<body>
+  <!-- Div A : Inline Event Example -->
+  <div id="a">
+    <button onclick="alert('I am inline event')">Click me</button>
+  </div>
+
+  <!-- Div B : Double-click Event Example -->
+  <div id="b">
+    <button id="btn">Touch me</button>
+  </div>
+
+  <!-- Div C : Mouseover + Mouseout Example -->
+  <div id="c">
+    <button id="btn1">Use me</button>
+  </div>
+</body>
+</html>

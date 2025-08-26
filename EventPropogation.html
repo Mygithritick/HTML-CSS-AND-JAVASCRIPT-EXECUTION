@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./EventPropogation.js" defer></script>
+    <style>
+        #a{
+            border:2px solid red;
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+        }
+        #b{
+            border:2px solid red;
+            width:100px;
+            height:100px;
+            padding: 50px;
+        }
+        #c{
+            border:2px solid red;
+            width:50px;
+            height:50px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <span>grand parent</span>
+    <div id="a">
+    <span>parent</span>
+    <div id="b">
+    <span>child</span>
+    <div id="c">
+        <button>click</button>
+</div>
+    </div>
+    </div>
+</body>
+</html>
