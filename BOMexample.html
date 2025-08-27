@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <button id="back">backward</button>
+    <button id="for1">forward</button>
+    <script>
+        //screen
+        console.log(screen.width);
+        console.log(screen.height);
+        console.log(screen.availWidth);
+        console.log(screen.availHeight);
+
+        //location
+        console.log(location.pathname);
+        let btn=document.querySelector("#btn")
+        btn.addEventListener("click",()=>{
+            location.href="./digitalclock.html"
+        })
+        // btn.addEventListener("click",()=>{
+        //     location.assign("fetch.html");
+
+        // })
+        console.log(location.hostname);
+        console.log(location.protocol);
+
+        //history
+        let back=document.querySelector("#back")
+        let for1=document.querySelector("#for1");
+
+        back.addEventListener("click",()=>{
+            history.back();
+        })
+        for1.addEventListener("click",()=>{
+            history.forward();
+        })
+
+        //navigator
+        console.log(navigator.language);
+        console.log(navigator.onLine);
+        console.log(navigator.appName);
+        </script>
+</body>
+</html>

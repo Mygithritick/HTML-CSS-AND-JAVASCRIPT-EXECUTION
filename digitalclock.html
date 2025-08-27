@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
 </head>
 <body>
-    <script>
-        function clock(){
-            let now=new Date();
-            let hour=now.getHours();
-            let minutes=now.getMinutes();
-            let seconds=now.getSeconds();
+  <h2 id="clock"></h2>
+  <button id="back">⬅ Back</button>
+  <button id="for1">➡ Forward</button>
 
-            hour=(hour<10)?"0"+hour:hour;
-            minutes=(minutes<10)?"0"+minutes:minutes;
-            seconds=(seconds<10)?"0"+seconds:seconds;
+  <script>
+    function clock(){
+      let now = new Date();
+      let hour = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
 
-            let timeStamp=`${hour}:${minutes}:${seconds}`;
-            document.body.innerText=timeStamp;
-        }
-        clock()
-        setInterval(clock,1000)
-    </script>
+      hour = (hour < 10) ? "0" + hour : hour;
+      minutes = (minutes < 10) ? "0" + minutes : minutes;
+      seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+      let timeStamp = `${hour}:${minutes}:${seconds}`;
+      document.getElementById("clock").innerText = timeStamp;
+    }
+
+    // Run clock immediately + update every second
+    clock();
+    setInterval(clock, 1000);
+
+    // Select buttons properly
+    let backBtn = document.getElementById("back");
+    let forBtn = document.getElementById("for1");
+
+    backBtn.addEventListener("click", ()=> history.back());
+    forBtn.addEventListener("click", ()=> history.forward());
+  </script>
 </body>
 </html>
